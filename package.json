@@ -1,0 +1,61 @@
+{
+  "name": "dsh-prompt-workshop",
+  "version": "0.2.0",
+  "description": "把粗糙想法变成目标生成模型可直接使用的精准提示词：内置 19 个模型规范（含豆包 Seedream/Seedance）、多模型增强、提示词评分诊断、图片反推提示词，并周期联网自更新本地知识库。",
+  "icon": "icon.jpg",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    },
+    "manifestVersion": 1
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/",
+    "locale/",
+    "cordis.patch.yml",
+    "README.md",
+    "icon.jpg",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "engines": {
+    "node": ">=22.13.0",
+    "dsh": ">=0.2.1-rc.1"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "prompt",
+    "prompt-engineering",
+    "image-generation",
+    "video-generation",
+    "midjourney",
+    "doubao",
+    "sora",
+    "kling"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:direct": "node test/presets.test.mjs && node test/engine.test.mjs && node test/store.test.mjs && node test/client.smoke.mjs",
+    "build:presets": "node scripts/build-presets.mjs",
+    "install:profile": "node scripts/install-desktop.mjs desktop",
+    "uninstall:profile": "node scripts/uninstall-desktop.mjs desktop"
+  }
+}
