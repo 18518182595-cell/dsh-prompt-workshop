@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "提示词工坊",
+    "description": "把粗糙想法变成精准提示词：内置 19 个目标模型规范（Midjourney/SD/FLUX/GPT-Image/豆包 Seedream、Sora/Veo/可灵/海螺/豆包 Seedance 等）、多模型增强、提示词评分诊断、图片反推，并周期联网自更新本地知识库。"
+  }
+}
