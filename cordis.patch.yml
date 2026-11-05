@@ -1,0 +1,6 @@
+# dsh-prompt-workshop bundle patch: host plugin (tools + HTTP API) and client UI.
+# Insert only; no config here — user settings live in the plugin's own JSON store
+# (~/.dsh/prompt-workshop.json) and are editable from the in-app panel.
+- insert:
+    - id: dsh-prompt-workshop
+      name: dsh-prompt-workshop
