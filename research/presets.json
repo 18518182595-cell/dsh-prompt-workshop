@@ -1,0 +1,2564 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-11-05",
+  "timeBasis": "2026-11",
+  "generator": "dsh-prompt-workshop built-in knowledge base",
+  "sources": [
+    {
+      "id": "mj-params",
+      "title": "Midjourney Parameter List",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-09-01",
+      "notes": "参数语义与放置规则"
+    },
+    {
+      "id": "mj-version",
+      "title": "Midjourney Version",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-09-01",
+      "notes": "V8.2 默认版本(2026-07-24)"
+    },
+    {
+      "id": "mj-aspect",
+      "title": "Midjourney Aspect Ratio",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/31894244298125-Aspect-Ratio",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-07-27",
+      "notes": "--ar 规则"
+    },
+    {
+      "id": "mj-stylize",
+      "title": "Midjourney Stylize",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32196176868109-Stylize",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-07-27",
+      "notes": "0-1000 默认100"
+    },
+    {
+      "id": "mj-sref",
+      "title": "Midjourney Style Reference",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-07-27",
+      "notes": "--sref/--sw 0-1000 默认100"
+    },
+    {
+      "id": "mj-oref",
+      "title": "Midjourney Omni Reference",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/36285124473997-Omni-Reference",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-09-01",
+      "notes": "V7 专属; V8.x 用 Edit Model"
+    },
+    {
+      "id": "mj-weird",
+      "title": "Midjourney Weird",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32390120435085-Weird",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-07-27",
+      "notes": "0-3000 默认0"
+    },
+    {
+      "id": "mj-video",
+      "title": "Midjourney Video",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-08-31",
+      "notes": "5s 基础; --motion/--loop/--end/--bs"
+    },
+    {
+      "id": "mj-edit",
+      "title": "Midjourney Edit Model",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/48495453462797-Edit-Model",
+      "vendor": "Midjourney",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-09-24",
+      "notes": "V8.1/8.2; 最多4参考图; 取代 oref/cref"
+    },
+    {
+      "id": "mj-v7-guide",
+      "title": "Midjourney V7 新特性（社区整理）",
+      "url": "https://raw.githubusercontent.com/Pixmind-io/awesome-midjourney-v7-example-prompts/main/guide/v7-new-features.md",
+      "vendor": "community",
+      "type": "community",
+      "status": "used",
+      "updatedAt": "2025",
+      "notes": "V7 发布/默认日期与 --exp 等社区信息"
+    },
+    {
+      "id": "bfl-prompt",
+      "title": "FLUX Prompting Guide",
+      "url": "https://docs.bfl.ai/guides/prompting_summary",
+      "vendor": "Black Forest Labs",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "FLUX 3 提示词总览"
+    },
+    {
+      "id": "bfl-tech",
+      "title": "FLUX Technical Parameters",
+      "url": "https://docs.bfl.ai/guides/prompting_unified_technical.md",
+      "vendor": "Black Forest Labs",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "15 固定比例/auto; 4K; 用正向描述替代负向"
+    },
+    {
+      "id": "bfl-video",
+      "title": "FLUX Video Generation",
+      "url": "https://docs.bfl.ai/guides/prompting_video_overview.md",
+      "vendor": "Black Forest Labs",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "t2v/i2v/keyframes/v2v"
+    },
+    {
+      "id": "bfl-index",
+      "title": "Black Forest Labs 文档索引",
+      "url": "https://docs.bfl.ai/llms.txt",
+      "vendor": "Black Forest Labs",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "FLUX 3/FLUX.2/FLUX.1 均在模型清单"
+    },
+    {
+      "id": "azure-gpt-image",
+      "title": "Azure OpenAI image generation models",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/dall-e",
+      "vendor": "Microsoft/OpenAI",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "GPT-Image-2.5/2/1.5/1 型号与能力; DALL·E3 2026-03-04 退役"
+    },
+    {
+      "id": "a1111-features",
+      "title": "Stable Diffusion web UI Features",
+      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features",
+      "vendor": "AUTOMATIC1111",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2024",
+      "notes": "SDXL 1024; (word:1.2)/[word]/BREAK 语法"
+    },
+    {
+      "id": "sd35-guide",
+      "title": "Stable Diffusion 3.5 Prompt Guide (SceneWorks)",
+      "url": "https://raw.githubusercontent.com/sceneworks/sceneworks/a1d95e2c43eef4a34a3fe5bf420bb2cc2abe181f/apps/web/public/prompt-guides/sd3-5.md",
+      "vendor": "community",
+      "type": "community",
+      "status": "used",
+      "updatedAt": "2025",
+      "notes": "SD3.5 参数与提示词指南（非 Stability 官方）"
+    },
+    {
+      "id": "kling-manual",
+      "title": "Kling 4.0 Video User Manual",
+      "url": "https://kling.ai/document-api/api/usage-guide/kling-4-0",
+      "vendor": "Kuaishou/Kling",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "30s/Omni Reference/10 keyframes/3 endpoints"
+    },
+    {
+      "id": "kling-prompt",
+      "title": "Kling 4.0 Video Prompt Guide",
+      "url": "https://kling.ai/document-api/api/usage-guide/kling-4-0-prompt-guide",
+      "vendor": "Kuaishou/Kling",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "分节提示词示例"
+    },
+    {
+      "id": "minimax-video",
+      "title": "MiniMax Video Generation",
+      "url": "https://platform.minimax.io/docs/guides/video-generation",
+      "vendor": "MiniMax",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "H3: 768P/2K, 4-15s, 7000字符, 参考图≤9"
+    },
+    {
+      "id": "minimax-t2v",
+      "title": "MiniMax T2V API",
+      "url": "https://platform.minimax.io/docs/api-reference/video-generation-t2v.md",
+      "vendor": "MiniMax",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "模型含 Hailuo-2.3/02; 提示词≤2000字符"
+    },
+    {
+      "id": "minimax-fl2v",
+      "title": "MiniMax First/Last Frame API",
+      "url": "https://platform.minimax.io/docs/api-reference/video-generation-fl2v.md",
+      "vendor": "MiniMax",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "Hailuo-02 [commands] 运镜; 首尾帧不支持512P"
+    },
+    {
+      "id": "runway-gen4-video",
+      "title": "Runway Gen-4 Video Prompting Guide",
+      "url": "https://help.runwayml.com/hc/en-us/articles/39789879462419-Gen-4-Video-Prompting-Guide",
+      "vendor": "Runway",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "5/10s; 只支持正向措辞; 运动优先"
+    },
+    {
+      "id": "runway-gen4-image",
+      "title": "Runway Gen-4 Image Prompting Guide",
+      "url": "https://help.runwayml.com/hc/en-us/articles/35694045317139-Gen-4-Image-Prompting-Guide",
+      "vendor": "Runway",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026",
+      "notes": "描述式而非对话式"
+    },
+    {
+      "id": "sora2-official",
+      "title": "Sora 2 Prompting Guide (OpenAI Cookbook)",
+      "url": "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide",
+      "vendor": "OpenAI",
+      "type": "official",
+      "status": "page-exists-blocked",
+      "updatedAt": "2025",
+      "notes": "本环境 403; 内容经社区整理版转述"
+    },
+    {
+      "id": "sora2-community",
+      "title": "Sora 2 Prompting Guide（社区整理）",
+      "url": "https://raw.githubusercontent.com/het8802/opennolan/4457349c386ea1a89c01547f9a76fa650970c131/skills/creative/prompting/sora-prompting.md",
+      "vendor": "community",
+      "type": "community",
+      "status": "used",
+      "updatedAt": "2026",
+      "notes": "转述 OpenAI 官方模板; 100-250 词"
+    },
+    {
+      "id": "sora2-fal",
+      "title": "How to Write Prompts That Work for Sora 2",
+      "url": "https://fal.ai/learn/devs/how-to-write-prompts-sora-2",
+      "vendor": "fal",
+      "type": "community",
+      "status": "used",
+      "updatedAt": "2025-12-20",
+      "notes": "镜头/主体/风格三段式"
+    },
+    {
+      "id": "veo31-official",
+      "title": "Ultimate prompting guide for Veo 3.1",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1",
+      "vendor": "Google Cloud",
+      "type": "official",
+      "status": "page-exists-failed",
+      "updatedAt": "2025",
+      "notes": "本环境抓取失败; 参数经社区整理"
+    },
+    {
+      "id": "veo-community",
+      "title": "Veo reference（社区整理）",
+      "url": "https://raw.githubusercontent.com/smixs/visual-skills/HEAD/video/references/veo.md",
+      "vendor": "community",
+      "type": "community",
+      "status": "used",
+      "updatedAt": "2026",
+      "notes": "对白/SFX/JSON/时长语法"
+    },
+    {
+      "id": "seedance-official",
+      "title": "Seedance 1.0",
+      "url": "https://seed.bytedance.com/en/seedance",
+      "vendor": "ByteDance",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2025",
+      "notes": "1080p; 原生多镜头; 文/图生视频"
+    },
+    {
+      "id": "seedance-guide",
+      "title": "Seedance 1.0 pro 提示词指南",
+      "url": "https://docs.byteplus.com/zh-CN/docs/ModelArk/seedance-1-0-pro-pro-fast",
+      "vendor": "ByteDance/BytePlus",
+      "type": "official",
+      "status": "page-exists-js",
+      "updatedAt": "2026",
+      "notes": "页面存在但正文 JS 渲染, 未取到参数表"
+    },
+    {
+      "id": "seedream-guide",
+      "title": "Seedream 4.0-5.0 提示词指南",
+      "url": "https://ark.volcengine.com/region:cn-beijing/docs/seedream-4-0-5-0-prompt-guide",
+      "vendor": "ByteDance/Volcengine",
+      "type": "official",
+      "status": "page-exists-js",
+      "updatedAt": "2026",
+      "notes": "页面标题证实 4.0-5.0; 正文未取到"
+    },
+    {
+      "id": "dreamina",
+      "title": "Dreamina（即梦国际版）",
+      "url": "https://dreamina.capcut.com/",
+      "vendor": "ByteDance",
+      "type": "official",
+      "status": "page-exists-js",
+      "updatedAt": "2026",
+      "notes": "消费级产品; 底层 Seedream/Seedance"
+    },
+    {
+      "id": "vidu-image",
+      "title": "Vidu Image Generation API",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/vidu-image-generation-api-reference",
+      "vendor": "Alibaba Cloud/Shengshu",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2026-10-11",
+      "notes": "1K/2K/4K; 1 张; PNG; 异步"
+    },
+    {
+      "id": "wan22-readme",
+      "title": "Wan2.2 GitHub README",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "vendor": "Alibaba",
+      "type": "official",
+      "status": "verified",
+      "updatedAt": "2025",
+      "notes": "MoE; 美学标签; +65.6% 图 +83.2% 视频"
+    },
+    {
+      "id": "pika-adobe",
+      "title": "Adobe Firefly: Pika 2.2 视频生成",
+      "url": "https://helpx.adobe.com/firefly/web/firefly-video-editor/generate-videos/generate-videos-with-pika-22.html",
+      "vendor": "Adobe",
+      "type": "third-party",
+      "status": "page-exists",
+      "updatedAt": "2025",
+      "notes": "仅确认产品存在; 无提示词语法"
+    }
+  ],
+  "taskTypes": [
+    {
+      "id": "t2i",
+      "label": "文生图",
+      "labelEn": "Text to Image",
+      "description": "文字描述生成图片",
+      "defaultTargets": [
+        "midjourney-v7",
+        "sdxl",
+        "sd35",
+        "flux1",
+        "gpt-image",
+        "doubao-seedream",
+        "jimeng"
+      ]
+    },
+    {
+      "id": "i2i",
+      "label": "图生图",
+      "labelEn": "Image to Image / Edit",
+      "description": "参考图或编辑指令生成新图",
+      "defaultTargets": [
+        "midjourney-v7",
+        "gpt-image",
+        "doubao-seedream",
+        "jimeng",
+        "flux1"
+      ]
+    },
+    {
+      "id": "t2v",
+      "label": "文生视频",
+      "labelEn": "Text to Video",
+      "description": "文字描述生成视频",
+      "defaultTargets": [
+        "kling",
+        "hailuo",
+        "sora2",
+        "veo31",
+        "runway-gen4",
+        "seedance",
+        "wan22",
+        "vidu"
+      ]
+    },
+    {
+      "id": "i2v",
+      "label": "图生视频",
+      "labelEn": "Image to Video",
+      "description": "首帧/首尾帧或参考图生成视频",
+      "defaultTargets": [
+        "kling",
+        "hailuo",
+        "runway-gen4",
+        "seedance",
+        "vidu",
+        "wan22"
+      ]
+    },
+    {
+      "id": "writing",
+      "label": "写作",
+      "labelEn": "Writing",
+      "description": "文案/文章/脚本/邮件等文本创作",
+      "defaultTargets": [
+        "generic-text"
+      ]
+    },
+    {
+      "id": "coding",
+      "label": "代码",
+      "labelEn": "Coding",
+      "description": "生成或修改代码、调试、重构",
+      "defaultTargets": [
+        "generic-text"
+      ]
+    },
+    {
+      "id": "translation",
+      "label": "翻译",
+      "labelEn": "Translation",
+      "description": "多语种翻译与本地化",
+      "defaultTargets": [
+        "generic-text"
+      ]
+    },
+    {
+      "id": "analysis",
+      "label": "分析",
+      "labelEn": "Analysis",
+      "description": "分析、总结、评估、比较",
+      "defaultTargets": [
+        "generic-text"
+      ]
+    },
+    {
+      "id": "general",
+      "label": "通用",
+      "labelEn": "General",
+      "description": "其他通用文本任务",
+      "defaultTargets": [
+        "generic-text"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "midjourney-v7",
+      "label": "Midjourney（v7 / 当前 V8.2）",
+      "kind": "image",
+      "capabilities": [
+        "image",
+        "video"
+      ],
+      "vendor": "Midjourney",
+      "languageHint": "en",
+      "confidence": "high",
+      "versionNote": "V8.2 自 2026-07-24 为默认版本；V7 仍可用 --v 7 调用。V8.x 用 Edit Model 取代 Omni/Character Reference；--oref 仅 V7 有效。",
+      "syntaxRules": [
+        {
+          "rule": "参数放提示词末尾，参数前一个空格，参数内不要标点，参数后不要写提示词",
+          "source": "mj-params",
+          "verified": true
+        },
+        {
+          "rule": "--ar/--aspect W:H，任意比例会约分；不接受小数（8.5x11 => --ar 85:110）",
+          "source": "mj-aspect",
+          "verified": true
+        },
+        {
+          "rule": "--stylize/--s 0-1000，默认 100",
+          "source": "mj-stylize",
+          "verified": true
+        },
+        {
+          "rule": "--weird/--w 默认 0，最高 3000",
+          "source": "mj-weird",
+          "verified": true
+        },
+        {
+          "rule": "--sref 图片URL + --sw 0-1000（默认100）控制风格参考权重",
+          "source": "mj-sref",
+          "verified": true
+        },
+        {
+          "rule": "--oref 图片URL + --ow：仅 V7，全能参考（人物/物体/载具/生物），约 2x GPU；与 Fast/Draft/Conversational 模式及 --q 4 不兼容；--ow 范围待核实(官方常写0-1000)",
+          "source": "mj-oref",
+          "verified": true
+        },
+        {
+          "rule": "V8.x 用 Edit Model（最多 4 张参考图）替代 --oref/--cref",
+          "source": "mj-edit",
+          "verified": true
+        },
+        {
+          "rule": "--no 排除内容；--v 7 / --v 8.2 指定版本；--raw 降低默认风格化；--q 质量(V7 起有 4，其余档位待核实)；--chaos 0-100 待核实",
+          "source": "mj-params",
+          "verified": true
+        },
+        {
+          "rule": "视频：图片转 5 秒视频，专用参数 --motion low|high、--raw、--loop、--end、--bs；更长时长上限待核实",
+          "source": "mj-video",
+          "verified": true
+        }
+      ],
+      "paramHints": {
+        "aspectRatio": {
+          "values": [
+            "1:1",
+            "4:3",
+            "3:2",
+            "16:9",
+            "9:16",
+            "2:3",
+            "3:4",
+            "21:9"
+          ],
+          "syntax": "--ar 16:9"
+        },
+        "stylize": {
+          "min": 0,
+          "max": 1000,
+          "default": 100,
+          "syntax": "--s 180"
+        },
+        "weird": {
+          "min": 0,
+          "max": 3000,
+          "default": 0,
+          "syntax": "--w 50"
+        },
+        "styleWeight": {
+          "min": 0,
+          "max": 1000,
+          "default": 100,
+          "syntax": "--sw 150"
+        },
+        "omniReference": {
+          "syntax": "--oref <url> --ow 400",
+          "note": "仅 V7；V8.x 用 Edit Model"
+        },
+        "version": {
+          "syntax": "--v 7",
+          "currentDefault": "V8.2"
+        },
+        "quality": {
+          "syntax": "--q 4",
+          "note": "档位与默认值待核实"
+        },
+        "video": {
+          "duration": "5s 基础（可延展，上限待核实）",
+          "syntax": "--motion high --loop"
+        }
+      },
+      "do": [
+        "英文书写具体主体+环境+镜头+光线+媒介",
+        "参数统一放末尾",
+        "用 --sref/--sw 锁风格、--raw 提升服从度",
+        "需要角色一致性时 V7 用 --oref，V8.x 用 Edit Model",
+        "先用 Draft 模式快速试提示词"
+      ],
+      "dont": [
+        "参数中加逗号/句号",
+        "参数后继续写提示词",
+        "把 MJ 当精确排版/长文字工具",
+        "在 V8.x 继续依赖 --oref/--cref",
+        "堆 3 个以上风格词"
+      ],
+      "examplePrompt": {
+        "text": "cinematic portrait of an elderly fisherman mending a net on a foggy wooden pier at dawn, salt-stained wool sweater, weathered face, medium shot, soft rim light from the left, 85mm lens, shallow depth of field, muted film color grade --ar 3:2 --s 180 --v 7",
+        "note": "本知识库构造示例，非官方",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "sdxl",
+      "label": "Stable Diffusion SDXL",
+      "kind": "image",
+      "capabilities": [
+        "image",
+        "i2i"
+      ],
+      "vendor": "Stability AI",
+      "languageHint": "en",
+      "confidence": "medium",
+      "versionNote": "SDXL 1.0 base + refiner；原生 1024x1024。不同前端（A1111/ComfyUI/Invoke）语法略有差异。",
+      "syntaxRules": [
+        {
+          "rule": "(word) 权重约 x1.1；((word)) 约 x1.21；[word] 约 /1.1；(word:1.5) 精确倍率；字面括号用 \\( \\) 转义",
+          "source": "a1111-features",
+          "verified": true
+        },
+        {
+          "rule": "BREAK（大写）切分提示词块",
+          "source": "a1111-features",
+          "verified": true
+        },
+        {
+          "rule": "正向与负向提示词分开输入",
+          "source": "a1111-features",
+          "verified": true
+        },
+        {
+          "rule": "SDXL base 按 1024x1024 或比例桶训练；分辨率与训练分辨率差距大时质量下降",
+          "source": "a1111-features",
+          "verified": true
+        }
+      ],
+      "paramHints": {
+        "size": {
+          "value": "1024x1024",
+          "verified": true
+        },
+        "cfg": {
+          "min": 5,
+          "max": 8,
+          "note": "社区常用，待核实"
+        },
+        "steps": {
+          "min": 25,
+          "max": 35,
+          "note": "社区常用，待核实"
+        },
+        "sampler": {
+          "value": "DPM++ 2M Karras",
+          "note": "社区常用，待核实"
+        },
+        "refinerDenoise": {
+          "value": 0.2,
+          "note": "待核实"
+        },
+        "negativePrompt": true
+      },
+      "do": [
+        "主体+风格+光线+构图，质量词少量",
+        "用负向清单压手部/水印/低质",
+        "权重 1.1-1.4 微调，不要超过 1.5"
+      ],
+      "dont": [
+        "无意义标签堆砌",
+        "同时要 3 种以上互相冲突的风格",
+        "用非 1024 系分辨率硬出图",
+        "权重过高导致过曝/崩坏"
+      ],
+      "examplePrompt": {
+        "text": "(masterpiece:1.2), portrait of a female astronaut, (detailed helmet visor reflecting Earth:1.3), white suit, volumetric light, cinematic, 85mm photo, ultra detailed",
+        "negativePrompt": "lowres, bad anatomy, bad hands, extra fingers, watermark, text, jpeg artifacts",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "sd35",
+      "label": "Stable Diffusion 3.5",
+      "kind": "image",
+      "capabilities": [
+        "image",
+        "i2i"
+      ],
+      "vendor": "Stability AI",
+      "languageHint": "en",
+      "confidence": "medium",
+      "versionNote": "Large 8B / Large Turbo / Medium 2.5B；三编码器 CLIP-L+CLIP-G+T5-XXL。官方参数页本环境未取到，以下默认值来自社区指南，标待核实。",
+      "syntaxRules": [
+        {
+          "rule": "自然语言成句优于标签堆砌：主体+场景+细节+风格+构图+光线（+文字）",
+          "source": "sd35-guide",
+          "verified": false
+        },
+        {
+          "rule": "图中精确文字用双引号包裹",
+          "source": "sd35-guide",
+          "verified": false
+        },
+        {
+          "rule": "Large/Medium 支持负向提示词；Large Turbo 为 CFG-free，负向提示词无效",
+          "source": "sd35-guide",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "size": {
+          "value": "1024x1024；Medium 最高约 1440x1440",
+          "verified": false
+        },
+        "steps": {
+          "Large": 28,
+          "Turbo": 4,
+          "Medium": 40,
+          "verified": false
+        },
+        "guidance": {
+          "Large": 3.5,
+          "note": "高更服从，低更发散",
+          "verified": false
+        },
+        "sampler": {
+          "value": "flow-match Euler, time-shift 3.0",
+          "verified": false
+        },
+        "negativePrompt": "Large/Medium 有效，Turbo 无效"
+      },
+      "do": [
+        "用完整自然语言句子",
+        "明确风格与构图（模型不会自动推断）",
+        "精确文字用引号",
+        "Large 用负向提示词"
+      ],
+      "dont": [
+        "给 Turbo 写负向提示词",
+        "超长堆砌标签",
+        "期望 Turbo 用 CFG 调参"
+      ],
+      "examplePrompt": {
+        "text": "A lighthouse keeper climbing a spiral iron staircase, lantern in hand, weathered brass fittings, salt-streaked stone walls, cold blue dawn light through narrow windows, medium shot, low angle, photorealistic, fine film grain",
+        "negativePrompt": "blurry, extra fingers, watermark, text, distorted architecture",
+        "note": "本知识库构造；结构参考 SceneWorks SD3.5 指南",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "flux1",
+      "label": "FLUX.1（Black Forest Labs）",
+      "kind": "image",
+      "capabilities": [
+        "image",
+        "i2i",
+        "video"
+      ],
+      "vendor": "Black Forest Labs",
+      "languageHint": "en",
+      "confidence": "medium",
+      "versionNote": "BFL 现主推 FLUX 3（图像/视频/同步音频）与 FLUX.2；FLUX.1 仍在价格清单。FLUX 3 参数来自官方文档已核实；FLUX.1 旧参数（steps/guidance/safety_tolerance）待核实。",
+      "syntaxRules": [
+        {
+          "rule": "用完整自然语言描述主体、场景、风格、光线、构图",
+          "source": "bfl-prompt",
+          "verified": true
+        },
+        {
+          "rule": "FLUX 3 图像：15 个固定宽高比（21:9 至 9:21）或 auto；auto 跟随第一张参考图，无参考时为 1:1；支持最高 4K",
+          "source": "bfl-tech",
+          "verified": true
+        },
+        {
+          "rule": "多参考图按位置引用（image 1 / image 2）；可用 bounding box 指定元素位置",
+          "source": "bfl-prompt",
+          "verified": true
+        },
+        {
+          "rule": "官方明确：用正向描述替代 negative prompt（无独立负向字段）",
+          "source": "bfl-tech",
+          "verified": true
+        },
+        {
+          "rule": "视频：t2v / i2v / 关键帧插值 / 视频续写 v2v，可生成同步音频",
+          "source": "bfl-video",
+          "verified": true
+        },
+        {
+          "rule": "FLUX.1 常见参数（待核实）：width/height 或 aspect_ratio、steps、guidance、seed、prompt_upsampling、safety_tolerance",
+          "source": "bfl-index",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "aspectRatio": {
+          "values": [
+            "21:9",
+            "16:9",
+            "3:2",
+            "4:3",
+            "1:1",
+            "3:4",
+            "2:3",
+            "9:16",
+            "9:21",
+            "auto"
+          ],
+          "note": "FLUX 3"
+        },
+        "resolution": {
+          "value": "最高 4K（FLUX 3）",
+          "verified": true
+        },
+        "negativePrompt": false,
+        "guidance": {
+          "note": "FLUX.1 dev 约 2.5-4，待核实"
+        },
+        "steps": {
+          "note": "FLUX.1 常用 20-50，待核实"
+        },
+        "seed": true
+      },
+      "do": [
+        "像摄影 brief 一样写完整画面",
+        "先画面后镜头",
+        "用参考图+位置引用控制一致性",
+        "把不要的东西改写成正向约束"
+      ],
+      "dont": [
+        "期待负向提示词生效",
+        "只写关键词不写句子",
+        "在 FLUX.1 上套用 SD 的权重语法"
+      ],
+      "examplePrompt": {
+        "text": "Ultra-wide cinematic shot of a fog-drenched coastal highway at dawn, cliffs on one side, turquoise sea on the other, a single vintage car with headlights on, soft golden rim light, 21:9",
+        "note": "结构参考 BFL 官方示例改写",
+        "source": "bfl-prompt"
+      }
+    },
+    {
+      "id": "gpt-image",
+      "label": "GPT-Image（OpenAI）",
+      "kind": "image",
+      "capabilities": [
+        "image",
+        "i2i"
+      ],
+      "vendor": "OpenAI",
+      "languageHint": "both",
+      "confidence": "medium",
+      "versionNote": "当前型号：GPT-Image-2.5-Sunburst（最强编辑）/ 2.5-Flare（最快）/ GPT-Image-2（4K、广比例）/ 1.5 / 1 / 1-Mini；DALL·E 3 已于 2026-03-04 退役。",
+      "syntaxRules": [
+        {
+          "rule": "自然语言描述场景、主体、风格、构图；可对话式迭代修改",
+          "source": "azure-gpt-image",
+          "verified": true
+        },
+        {
+          "rule": "不支持独立负向提示词字段，用正向约束表达（干净背景、无文字）",
+          "source": "azure-gpt-image",
+          "verified": false
+        },
+        {
+          "rule": "需要出字时在提示词中给精确字符串（引号）",
+          "source": "azure-gpt-image",
+          "verified": false
+        },
+        {
+          "rule": "API 参数：size / quality(low|medium|high) / n / output_format / background；GPT-Image-2 支持 4K 与更多比例；具体像素档位待核实",
+          "source": "azure-gpt-image",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "size": {
+          "note": "常见 1024x1024 / 1536x1024 / 1024x1536；2.x 更多档位，待核实"
+        },
+        "quality": {
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "n": {
+          "min": 1,
+          "note": "按型号上限"
+        },
+        "outputFormat": {
+          "values": [
+            "png",
+            "jpeg",
+            "webp"
+          ]
+        },
+        "negativePrompt": false,
+        "maxResolution": "4K（GPT-Image-2）"
+      },
+      "do": [
+        "把它当会画画的编辑：描述+迭代",
+        "复杂需求拆多轮",
+        "参考图编辑时说明保留什么、改什么",
+        "需要文字时给精确字符串"
+      ],
+      "dont": [
+        "依赖负向字段",
+        "一次塞入互相冲突的多套风格",
+        "期望输出 URL（当前输出为 base64）"
+      ],
+      "examplePrompt": {
+        "text": "A cozy Japanese kissaten at dusk, warm tungsten light, rain-streaked window, a cup of latte on a walnut table, 35mm film look, shallow depth of field, no text, no watermark",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "doubao-seedream",
+      "label": "豆包 Seedream（图片）",
+      "kind": "image",
+      "capabilities": [
+        "image",
+        "i2i"
+      ],
+      "vendor": "字节跳动 / 豆包",
+      "languageHint": "zh",
+      "confidence": "medium",
+      "versionNote": "官方已发布 Seedream 4.0-4.5 提示词指南；火山方舟另有 Seedream 4.0-5.0 提示词指南页面标题。5.0 是否上线及参数待核实。",
+      "syntaxRules": [
+        {
+          "rule": "中文自然语言描述为主，支持文生图、图生图/编辑、参考图生成、组图",
+          "source": "seedream-guide",
+          "verified": false
+        },
+        {
+          "rule": "需要文字时用引号给出中文原文；模型具备中文文字渲染能力",
+          "source": "seedream-guide",
+          "verified": false
+        },
+        {
+          "rule": "常用参数：尺寸/比例、2K/4K 档位、seed、水印开关、参考图数量；字段名与取值待核实",
+          "source": "seedream-guide",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "aspectRatio": {
+          "note": "按用途选 1:1/4:3/3:2/16:9/9:16；具体支持列表待核实"
+        },
+        "resolution": {
+          "value": "2K/4K 档位待核实"
+        },
+        "seed": true,
+        "watermark": {
+          "note": "可关（待核实字段名）"
+        },
+        "referenceImages": {
+          "note": "参考图/图生图可用，数量待核实"
+        },
+        "negativePrompt": false
+      },
+      "do": [
+        "中文写主体+场景+风格+光线+构图",
+        "组图任务写清同主体不同画面",
+        "海报/电商写版式与留白",
+        "用参考图锁人物/商品一致性"
+      ],
+      "dont": [
+        "直接套用 MJ 的 --参数语法",
+        "写超长抽象形容词堆砌",
+        "假设英文专用"
+      ],
+      "examplePrompt": {
+        "text": "中国风电商海报：一位年轻女性在江南园林中撑油纸伞，浅青色旗袍，清晨薄雾，柔和侧光，中景构图，右上角留白用于标题，高级质感，8K 细节",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "jimeng",
+      "label": "即梦（Dreamina，字节）",
+      "kind": "video",
+      "capabilities": [
+        "image",
+        "video"
+      ],
+      "vendor": "字节跳动 / 即梦",
+      "languageHint": "zh",
+      "confidence": "low",
+      "versionNote": "字节消费级创作产品（国际版 Dreamina），底层使用 Seedream（图像）与 Seedance（视频）系模型；BytePlus 文档出现 Dreamina Seedance 2.0/2.5、Seedream 4.0-4.5。App 不暴露底层参数。",
+      "syntaxRules": [
+        {
+          "rule": "中文自然语言；支持文生图/图生图/文生视频/图生视频，能力随版本变化",
+          "source": "dreamina",
+          "verified": false
+        },
+        {
+          "rule": "视频支持参考图、首尾帧、运镜等玩法（以产品 UI 为准）",
+          "source": "dreamina",
+          "verified": false
+        },
+        {
+          "rule": "通常不暴露 CFG/步数等底层参数，只提供比例、时长、风格模板、清晰度等",
+          "source": "dreamina",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "aspectRatio": {
+          "note": "按用途选择（16:9/9:16/1:1）"
+        },
+        "duration": {
+          "note": "常见 5s/10s（按产品档位）"
+        },
+        "resolution": {
+          "note": "720p/1080p 档位（待核实）"
+        },
+        "negativePrompt": {
+          "note": "部分视频模式支持，待核实"
+        },
+        "referenceImage": true
+      },
+      "do": [
+        "中文短句写清主体与动作",
+        "视频写清镜头怎么动+画面什么在动",
+        "用参考图锁人物/商品",
+        "需要出字时给引号原文"
+      ],
+      "dont": [
+        "写 MJ/SD 参数语法",
+        "一镜里塞过多动作",
+        "假设一定能出精确长文本"
+      ],
+      "examplePrompt": {
+        "text": "清晨的江南水乡，石桥上有薄雾，一位穿旗袍的女性缓步走过，镜头缓慢跟随，水面有倒影，柔和晨光，电影质感，10 秒",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "kling",
+      "label": "可灵 Kling（4.0 / 2.5）",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "image"
+      ],
+      "vendor": "快手 / Kling AI",
+      "languageHint": "zh",
+      "confidence": "high",
+      "versionNote": "Kling 4.0 原生最长 30 秒、Omni Reference、最多 10 张关键帧；API 入口：Omni Reference / Image-to-Video / Text-to-Video。Kling 2.5 仍可用（5/10s、1080p 级）。",
+      "syntaxRules": [
+        {
+          "rule": "按整体风格→角色/车辆→场景道具→镜头动作→声音分节写；官方示例用 [Overall Style] 等方括号分节",
+          "source": "kling-prompt",
+          "verified": true
+        },
+        {
+          "rule": "支持首帧/尾帧、关键帧序列、Omni Reference 多素材参考",
+          "source": "kling-manual",
+          "verified": true
+        },
+        {
+          "rule": "镜头运动、时长、比例、模式走 API 参数（duration / aspect_ratio / mode / camera_control）",
+          "source": "kling-manual",
+          "verified": true
+        },
+        {
+          "rule": "Kling 2.5 常见规格：5/10 秒、16:9/9:16/1:1、std/pro 模式、可选首尾帧；负向提示词字段存在但当前取值待核实",
+          "source": "kling-manual",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "duration": {
+          "Kling40": "最长 30s",
+          "Kling25": "5s / 10s",
+          "verified": true
+        },
+        "aspectRatio": {
+          "values": [
+            "16:9",
+            "9:16",
+            "1:1"
+          ],
+          "note": "2.5；4.0 更多档位"
+        },
+        "mode": {
+          "values": [
+            "std",
+            "pro"
+          ]
+        },
+        "cameraControl": {
+          "note": "支持运镜/运动笔刷；参数名待核实"
+        },
+        "negativePrompt": {
+          "note": "API 支持；取值待核实"
+        },
+        "keyframes": {
+          "max": 10,
+          "note": "Kling 4.0"
+        },
+        "referenceLimit": {
+          "note": "Omni Reference 多素材，具体上限待核实"
+        }
+      },
+      "do": [
+        "中文原生描述",
+        "分镜写清每段主体动作+镜头运动",
+        "角色一致性用参考图",
+        "复杂动作拆短节拍"
+      ],
+      "dont": [
+        "用负向措辞替代正向动作描述（视频）",
+        "同一镜头塞多个大动作",
+        "直接套用 MJ 参数"
+      ],
+      "examplePrompt": {
+        "text": "[Overall Style] 10 秒，写实电影质感，黄昏海边，手持轻微晃动，[Characters and Vehicles] 一位穿深色风衣的女性，短发，沿沙滩向镜头走来，[Camera] 低机位，缓慢推近，最后停在半身特写，[Audio] 海浪声，风声，远处海鸥",
+        "note": "按 Kling 4.0 官方分节风格构造",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "hailuo",
+      "label": "海螺 Hailuo（H3 / Hailuo-02）",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "i2v"
+      ],
+      "vendor": "MiniMax",
+      "languageHint": "zh",
+      "confidence": "high",
+      "versionNote": "当前主推 MiniMax-H3（768P/2K、4-15 秒整数、提示词≤7000 字符、参考图≤9/视频≤3/音频≤3）。MiniMax-Hailuo-02 与 Hailuo-2.3 仍在 T2V API 模型列表；Hailuo-02 提示词≤2000 字符，支持 [命令] 运镜，首尾帧模式不支持 512P。",
+      "syntaxRules": [
+        {
+          "rule": "Hailuo-02 可用方括号命令控制镜头（如 [Push in]、[Pan left] 等；完整命令表待核实）",
+          "source": "minimax-fl2v",
+          "verified": true
+        },
+        {
+          "rule": "H3 支持文本/图像/视频/音频混合输入；用自然语言描述镜头、声音、情绪、风格",
+          "source": "minimax-video",
+          "verified": true
+        },
+        {
+          "rule": "首/尾帧：图片 0/1/2 张；宽高 256-5760；宽高比 2:5-5:2",
+          "source": "minimax-video",
+          "verified": true
+        },
+        {
+          "rule": "提示词长度：H3 ≤7000 字符；Hailuo-02 ≤2000 字符",
+          "source": "minimax-video",
+          "verified": true
+        }
+      ],
+      "paramHints": {
+        "resolution": {
+          "H3": "768P/2K",
+          "Hailuo02": "512P/768P/1080P（待核实）",
+          "verified": true
+        },
+        "duration": {
+          "H3": "4-15 秒（整数）",
+          "Hailuo02": "6s/10s（待核实）",
+          "verified": true
+        },
+        "aspectRatio": {
+          "values": [
+            "16:9",
+            "9:16",
+            "1:1",
+            "adaptive"
+          ],
+          "note": "H3"
+        },
+        "promptLength": {
+          "H3": 7000,
+          "Hailuo02": 2000
+        },
+        "negativePrompt": false,
+        "cameraCommands": true
+      },
+      "do": [
+        "中文写清谁、在哪、做什么、镜头怎么动",
+        "需要运镜时用方括号命令",
+        "参考生成时说明每张素材作用",
+        "控制在时长能承载的动作量"
+      ],
+      "dont": [
+        "首尾帧任务用 512P（Hailuo-02 不支持）",
+        "超过提示词字符上限",
+        "只写静态画面不写运动"
+      ],
+      "examplePrompt": {
+        "text": "傍晚的东京街头，一位穿米色风衣的女性撑伞走过积水路面，霓虹倒影，镜头低角度缓慢跟随，雨声与远处车流声，电影感，6 秒",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "sora2",
+      "label": "Sora 2（OpenAI）",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "i2v"
+      ],
+      "vendor": "OpenAI",
+      "languageHint": "both",
+      "confidence": "medium",
+      "versionNote": "Sora 2 / Sora 2 Pro，原生音频。官方 Cookbook 提示词指南在本环境被 403，以下结构来自社区转述版；时长/分辨率档位待核实。",
+      "syntaxRules": [
+        {
+          "rule": "结构化模板：散文式场景 + Cinematography 块(shot/lens/lighting/mood) + Actions 分节拍 + Dialogue",
+          "source": "sora2-community",
+          "verified": false
+        },
+        {
+          "rule": "100-250 词最佳，超过 250 词收益递减",
+          "source": "sora2-community",
+          "verified": false
+        },
+        {
+          "rule": "对白要短，一句一拍；复杂多角色对白效果差",
+          "source": "sora2-community",
+          "verified": false
+        },
+        {
+          "rule": "支持制作级细节：镜头/胶片/滤镜/调色/快门/音效；API 可用最多 2 个角色参考 ID",
+          "source": "sora2-community",
+          "verified": false
+        },
+        {
+          "rule": "时长 4/8/12 秒、分辨率档位待官方确认",
+          "source": "sora2-official",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "duration": {
+          "values": [
+            "4s",
+            "8s",
+            "12s"
+          ],
+          "note": "待核实"
+        },
+        "aspectRatio": {
+          "values": [
+            "16:9",
+            "9:16"
+          ],
+          "note": "按 API 版本"
+        },
+        "resolution": {
+          "note": "Sora 2 / Sora 2 Pro 档位待核实"
+        },
+        "characterRefs": {
+          "max": 2,
+          "note": "API 角色 ID"
+        },
+        "audio": true,
+        "negativePrompt": false
+      },
+      "do": [
+        "先讲画面故事，再给摄影参数",
+        "动作按 beat 拆 2-4 段",
+        "对白短、单角色优先",
+        "写环境声/画外音"
+      ],
+      "dont": [
+        "超过 250 词堆细节",
+        "多角色长对白",
+        "用负向措辞当主要控制手段",
+        "写抽象情绪代替具体动作"
+      ],
+      "examplePrompt": {
+        "text": "A woman in a red coat walks briskly through a crowded night market, neon reflections on wet pavement. Cinematography: low-angle tracking shot, 35mm anamorphic, shallow depth of field, warm practical lights, teal-and-orange grade. Actions: she glances back; a paper lantern sways; steam rises from a food stall. Dialogue: \"This way,\" she says, barely audible. Audio: rain patter, distant chatter, sizzling wok.",
+        "note": "按社区转述的官方模板构造",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "veo31",
+      "label": "Veo 3.1（Google）",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "i2v"
+      ],
+      "vendor": "Google DeepMind",
+      "languageHint": "both",
+      "confidence": "medium",
+      "versionNote": "Veo 3.1：原生同步音频、首帧图生视频、参考素材。官方提示词指南在本环境抓取失败；以下语法来自社区整理，数值待核实。",
+      "syntaxRules": [
+        {
+          "rule": "结构：主体/动作+环境+镜头/景别+光线/氛围+风格+音频+时长；50-200 词最佳",
+          "source": "veo-community",
+          "verified": false
+        },
+        {
+          "rule": "对白：双引号+说话动词（says/whispers/shouts），冒号写法也可；单条对白最长约 8 秒",
+          "source": "veo-community",
+          "verified": false
+        },
+        {
+          "rule": "音效：Audio: / SFX: 标签或括号拟声，如 (thunder cracks)",
+          "source": "veo-community",
+          "verified": false
+        },
+        {
+          "rule": "支持 JSON 结构化提示词（镜头/音频/对白分字段）",
+          "source": "veo-community",
+          "verified": false
+        },
+        {
+          "rule": "时长 4/6/8 秒；支持首帧图生视频与参考素材",
+          "source": "veo31-official",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "duration": {
+          "values": [
+            "4s",
+            "6s",
+            "8s"
+          ],
+          "verified": false
+        },
+        "aspectRatio": {
+          "values": [
+            "16:9",
+            "9:16"
+          ]
+        },
+        "resolution": {
+          "note": "720p/1080p 档位待核实"
+        },
+        "audio": true,
+        "dialogueMaxSeconds": 8,
+        "referenceIngredients": {
+          "note": "3.1 支持参考素材，数量待核实"
+        },
+        "negativePrompt": false,
+        "jsonPrompt": true
+      },
+      "do": [
+        "先主体与镜头，再环境与声音",
+        "对白短、角色少",
+        "复杂场景用 JSON 结构化",
+        "音效分层写"
+      ],
+      "dont": [
+        "长对白/多轮对话",
+        "超过 200 词导致矛盾",
+        "依赖负向提示词"
+      ],
+      "examplePrompt": {
+        "text": "A woman in a trench coat stands on a rainy Tokyo rooftop at night. Cinematography: medium close-up, slow push-in, 50mm lens, neon rim light, shallow depth of field. She says quietly: \"It's starting.\" Audio: rain on metal, distant traffic, a low synth hum. Cinematic, 6 seconds.",
+        "note": "按社区整理语法构造",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "runway-gen4",
+      "label": "Runway Gen-4",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "i2v"
+      ],
+      "vendor": "Runway",
+      "languageHint": "en",
+      "confidence": "high",
+      "versionNote": "Gen-4 生成 5 或 10 秒视频，以输入图+文本提示词驱动；Gen-4 也支持文生图。",
+      "syntaxRules": [
+        {
+          "rule": "只用正向措辞：不写 no camera movement，改写 locked camera / camera remains still",
+          "source": "runway-gen4-video",
+          "verified": true
+        },
+        {
+          "rule": "提示词写主体运动、镜头运动、场景运动、风格描述；从简单开始，一次加一个元素",
+          "source": "runway-gen4-video",
+          "verified": true
+        },
+        {
+          "rule": "用简单直接的语言；把抽象概念翻译成具体物理动作",
+          "source": "runway-gen4-video",
+          "verified": true
+        },
+        {
+          "rule": "指代主体用 the subject 等泛称，避免与参考图冲突",
+          "source": "runway-gen4-video",
+          "verified": true
+        },
+        {
+          "rule": "图像提示词用描述性语句（cinematic photograph of...），不要对话式（can you generate...）",
+          "source": "runway-gen4-image",
+          "verified": true
+        }
+      ],
+      "paramHints": {
+        "duration": {
+          "values": [
+            "5s",
+            "10s"
+          ],
+          "verified": true
+        },
+        "aspectRatio": {
+          "note": "跟随输入图"
+        },
+        "resolution": {
+          "note": "720p/1080p 档位待核实"
+        },
+        "inputImage": "必需（视频）",
+        "negativePrompt": false
+      },
+      "do": [
+        "先写核心运动，再迭代加细节",
+        "正向描述期望动作",
+        "高质量无瑕疵输入图",
+        "用 the subject 指代"
+      ],
+      "dont": [
+        "写负向句（可能反向）",
+        "抽象概念/文学化描述",
+        "一次给满所有元素",
+        "对话式提示词"
+      ],
+      "examplePrompt": {
+        "text": "a handheld camera tracks the mechanical bull as it runs across the desert. the movement disturbs dust that trails behind the mechanical creature. cinematic live-action.",
+        "note": "出自 Runway 官方 Gen-4 指南示例",
+        "source": "runway-gen4-video"
+      }
+    },
+    {
+      "id": "pika22",
+      "label": "Pika 2.2",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "i2v"
+      ],
+      "vendor": "Pika Labs",
+      "languageHint": "en",
+      "confidence": "low",
+      "versionNote": "消费级网页产品；2.2 支持图生视频与特效/关键帧玩法。本环境未取到官方提示词语法文档，版本可能已更新。",
+      "syntaxRules": [
+        {
+          "rule": "简短英文提示词：主体动作+镜头运动+风格",
+          "source": "pika-adobe",
+          "verified": false
+        },
+        {
+          "rule": "以图片作为首帧；避免负向措辞",
+          "source": "pika-adobe",
+          "verified": false
+        },
+        {
+          "rule": "多用产品预设效果/关键帧而不是复杂文本控制",
+          "source": "pika-adobe",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "duration": {
+          "note": "常见 5s/10s（待核实）"
+        },
+        "resolution": {
+          "note": "720p/1080p（待核实）"
+        },
+        "aspectRatio": {
+          "note": "跟随输入图/产品选项"
+        },
+        "negativePrompt": false,
+        "firstFrameImage": true,
+        "effects": true
+      },
+      "do": [
+        "一个镜头一个动作",
+        "提示词 1-3 句",
+        "用首帧图保持一致性",
+        "长片分段生成再剪"
+      ],
+      "dont": [
+        "写长段落",
+        "依赖负向提示词",
+        "一次要求多镜头叙事"
+      ],
+      "examplePrompt": {
+        "text": "A paper boat drifts down a rain-filled gutter, camera slowly tracks beside it, shallow depth of field, moody afternoon light",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "vidu",
+      "label": "Vidu（生数科技）",
+      "kind": "video",
+      "capabilities": [
+        "image",
+        "video",
+        "i2v"
+      ],
+      "vendor": "生数科技 / 阿里云 Model Studio",
+      "languageHint": "zh",
+      "confidence": "medium",
+      "versionNote": "阿里云 Model Studio 上架 Vidu 图像模型（vidu-image_reference2image：文生图/编辑/参考生图，1K/2K/4K，1 张，PNG，异步）；视频模型参数待核实。",
+      "syntaxRules": [
+        {
+          "rule": "中文自然语言描述主体、风格、构图",
+          "source": "vidu-image",
+          "verified": true
+        },
+        {
+          "rule": "参考图任务说明保留什么、改什么",
+          "source": "vidu-image",
+          "verified": true
+        },
+        {
+          "rule": "比例/分辨率/时长走 API 参数；异步任务：创建任务→轮询",
+          "source": "vidu-image",
+          "verified": true
+        },
+        {
+          "rule": "视频支持文生/参考生/首尾帧（具体参数待核实）",
+          "source": "vidu-image",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "resolution": {
+          "image": "1K/2K/4K",
+          "verified": true
+        },
+        "imageCount": {
+          "value": 1,
+          "verified": true
+        },
+        "format": {
+          "value": "PNG",
+          "verified": true
+        },
+        "duration": {
+          "note": "视频 4s/8s（待核实）"
+        },
+        "aspectRatio": {
+          "note": "按 API 参数"
+        },
+        "negativePrompt": {
+          "note": "待核实"
+        },
+        "referenceImages": true
+      },
+      "do": [
+        "中文短句+具体视觉描述",
+        "海报/信息图强调版式/文字/层级",
+        "多人多物用参考图锁一致性"
+      ],
+      "dont": [
+        "假设一次出多张（图像为 1 张）",
+        "写 MJ 参数语法"
+      ],
+      "examplePrompt": {
+        "text": "极简科技产品海报：白色背景上一副银色无线耳机悬浮，柔和顶光，浅灰投影，右上角留白放标题，高级电商质感，2K",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "wan22",
+      "label": "Wan 2.2（阿里，开源）",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "i2v"
+      ],
+      "vendor": "Alibaba / Wan",
+      "languageHint": "both",
+      "confidence": "medium",
+      "versionNote": "Wan2.2 采用 MoE 架构；训练数据较 2.1 增加 65.6% 图像、83.2% 视频；强调电影级美学（光影/构图/对比/色调标签）与复杂运动。480P/720P 档位，具体参数待核实。",
+      "syntaxRules": [
+        {
+          "rule": "自然语言 + 电影级光线/构图/色调词，触发美学标签",
+          "source": "wan22-readme",
+          "verified": false
+        },
+        {
+          "rule": "开源管线可配负向提示词（diffusion 管线），具体默认值待核实",
+          "source": "wan22-readme",
+          "verified": false
+        },
+        {
+          "rule": "支持文生视频/图生视频，一镜到底为主",
+          "source": "wan22-readme",
+          "verified": true
+        }
+      ],
+      "paramHints": {
+        "resolution": {
+          "values": [
+            "480P",
+            "720P"
+          ],
+          "note": "按模型档位，待核实"
+        },
+        "duration": {
+          "note": "约 5s（帧数 4n+1，待核实）"
+        },
+        "guidance": {
+          "note": "待核实"
+        },
+        "negativePrompt": true,
+        "fps": {
+          "note": "待核实"
+        }
+      },
+      "do": [
+        "用光线/构图/色调具体词",
+        "动作写清起止状态",
+        "复杂叙事分段生成"
+      ],
+      "dont": [
+        "假设与闭源 API 参数一致",
+        "写超长分镜塞进一个 5 秒片段"
+      ],
+      "examplePrompt": {
+        "text": "黄昏的戈壁公路，一辆老式越野车驶过扬尘，低机位侧向跟拍，金色侧逆光，空气中有沙尘颗粒，电影级对比度，冷调阴影暖调高光，5 秒",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "seedance",
+      "label": "Seedance（豆包视频，字节）",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "i2v"
+      ],
+      "vendor": "字节跳动 / 豆包",
+      "languageHint": "zh",
+      "confidence": "medium",
+      "versionNote": "Seedance 1.0 官方：文/图生视频、原生多镜头叙事、1080p、运动稳定、提示词跟随强；BytePlus/火山方舟已出现 Seedance 1.5-pro、2.0、2.5 提示词指南（正文未取到）。",
+      "syntaxRules": [
+        {
+          "rule": "中文自然语言；多镜头按镜头 1/镜头 2 写清主体、动作、景别、转场",
+          "source": "seedance-official",
+          "verified": true
+        },
+        {
+          "rule": "支持首尾帧、参考图、运镜、固定镜头、seed 等参数（具体字段待核实）",
+          "source": "seedance-guide",
+          "verified": false
+        },
+        {
+          "rule": "原生多镜头叙事：可在一个任务里生成连贯多镜头",
+          "source": "seedance-official",
+          "verified": true
+        }
+      ],
+      "paramHints": {
+        "resolution": {
+          "value": "1080p（1.0）",
+          "verified": true
+        },
+        "duration": {
+          "note": "5s/10s（待核实）"
+        },
+        "aspectRatio": {
+          "note": "按 API"
+        },
+        "cameraFixed": {
+          "note": "支持（待核实字段名）"
+        },
+        "seed": true,
+        "negativePrompt": {
+          "note": "待核实"
+        },
+        "multiShot": true
+      },
+      "do": [
+        "中文写分镜脚本式提示词",
+        "人物一致性用参考图",
+        "每个镜头 1-2 个动作",
+        "需要口播时标明语言与语气"
+      ],
+      "dont": [
+        "一个镜头塞多个动作",
+        "忽略首尾帧衔接的物理连续性"
+      ],
+      "examplePrompt": {
+        "text": "镜头1：清晨的竹林，一位白衣剑客背对镜头站立，薄雾浮动，镜头缓慢环绕；镜头2：切到正面特写，他睁眼，竹叶被风吹落，逆光；电影质感，10 秒",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "generic-t2i",
+      "label": "通用文生图",
+      "kind": "image",
+      "capabilities": [
+        "image",
+        "i2i"
+      ],
+      "vendor": "generic",
+      "languageHint": "both",
+      "confidence": "medium",
+      "versionNote": "未指定模型时的通用兜底；参数按目标裁剪。",
+      "syntaxRules": [
+        {
+          "rule": "骨架：主体→细节→动作→场景→构图→光线→风格→文字/参数",
+          "source": "knowledge",
+          "verified": false
+        },
+        {
+          "rule": "负向提示词仅在目标支持时使用",
+          "source": "knowledge",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "aspectRatio": {
+          "values": [
+            "1:1",
+            "4:3",
+            "3:2",
+            "16:9",
+            "2:3",
+            "3:4",
+            "9:16"
+          ]
+        },
+        "negativePrompt": "按目标"
+      },
+      "do": [
+        "具体名词与动作",
+        "1-2 个风格词",
+        "明确构图与光线"
+      ],
+      "dont": [
+        "风格堆砌",
+        "无主体信息",
+        "假设所有模型都支持负向"
+      ],
+      "examplePrompt": {
+        "text": "A weathered fisherman mending a net on a foggy wooden pier at dawn, medium shot, soft blue-grey morning light with warm rim light, documentary photography, muted film color grade",
+        "note": "通用骨架示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "generic-t2v",
+      "label": "通用文生视频",
+      "kind": "video",
+      "capabilities": [
+        "video",
+        "i2v"
+      ],
+      "vendor": "generic",
+      "languageHint": "both",
+      "confidence": "medium",
+      "versionNote": "未指定模型时的通用兜底；默认 5-8 秒单镜头。",
+      "syntaxRules": [
+        {
+          "rule": "骨架：镜头/景别→主体动作→环境→镜头运动→光线→风格→时长/音频",
+          "source": "knowledge",
+          "verified": false
+        },
+        {
+          "rule": "多数视频模型不支持负向提示词，用正向描述",
+          "source": "knowledge",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "duration": {
+          "value": "5-8s"
+        },
+        "aspectRatio": {
+          "values": [
+            "16:9",
+            "9:16",
+            "1:1"
+          ]
+        }
+      },
+      "do": [
+        "写清什么在动+镜头怎么动",
+        "动作量与时长匹配",
+        "需要音频的模型单列 Audio"
+      ],
+      "dont": [
+        "负向措辞",
+        "一镜多动作",
+        "抽象文学化描述"
+      ],
+      "examplePrompt": {
+        "text": "A lone cyclist rides through a rain-soaked neon alley at night, camera tracks from behind at low angle, reflections ripple in puddles, slow motion, cinematic, 5 seconds",
+        "note": "通用骨架示例",
+        "source": "constructed"
+      }
+    },
+    {
+      "id": "generic-text",
+      "label": "通用纯文本",
+      "kind": "text",
+      "capabilities": [
+        "writing",
+        "coding",
+        "translation",
+        "analysis"
+      ],
+      "vendor": "generic",
+      "languageHint": "both",
+      "confidence": "high",
+      "versionNote": "适用于写作/代码/翻译/分析/通用任务。",
+      "syntaxRules": [
+        {
+          "rule": "结构：角色→目标→输入→约束→输出格式→示例",
+          "source": "knowledge",
+          "verified": false
+        },
+        {
+          "rule": "把评分标准写进提示词，要求先提纲后正文",
+          "source": "knowledge",
+          "verified": false
+        }
+      ],
+      "paramHints": {
+        "temperature": {
+          "note": "创意任务更高，事实/代码更低"
+        },
+        "maxTokens": {
+          "note": "按输出长度"
+        },
+        "format": {
+          "values": [
+            "markdown",
+            "json",
+            "plain"
+          ]
+        }
+      },
+      "do": [
+        "明确受众与输出格式",
+        "给约束与禁用项",
+        "复杂任务要求分步/给方案"
+      ],
+      "dont": [
+        "模糊要求（写好一点）",
+        "一次要求多种格式",
+        "忽略输入材料"
+      ],
+      "examplePrompt": {
+        "text": "你是资深产品文案。目标：为 dsh-prompt-workshop 插件写一段 120 字内的介绍。受众：AI 工具爱好者。要求：不夸大、包含 3 个能力点、结尾一句行动号召。输出：一段中文，不加标题。",
+        "note": "本知识库构造示例",
+        "source": "constructed"
+      }
+    }
+  ],
+  "styles": [
+    {
+      "id": "cinematic-photo",
+      "label": "电影感摄影",
+      "promptFragment": "cinematic photograph, anamorphic lens, dramatic volumetric lighting, teal and orange grade, shallow depth of field",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "电影感、写实叙事",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "film-35mm",
+      "label": "35mm 胶片",
+      "promptFragment": "35mm film photograph, Kodak Portra 400, natural grain, soft halation, warm skin tones",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "人像、纪实、复古",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "editorial-fashion",
+      "label": "时尚大片",
+      "promptFragment": "high-fashion editorial photography, studio strobe, strong shadows, bold color blocking, Vogue-style composition",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "时尚、海报、人像",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "studio-product",
+      "label": "棚拍产品",
+      "promptFragment": "professional product photography, seamless backdrop, softbox lighting, macro detail, reflective surface, e-commerce ready",
+      "bestFor": [
+        "t2i",
+        "i2i"
+      ],
+      "category": "电商、产品、广告",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "chinese-ink",
+      "label": "水墨",
+      "promptFragment": "traditional Chinese ink wash painting, xuan paper texture, misty mountains, sparse brush strokes, negative space, seal stamp",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "国风、山水、雅致",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "gongbi",
+      "label": "工笔",
+      "promptFragment": "gongbi Chinese fine brush painting, meticulous linework, mineral pigments, silk texture, ornate botanical details",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "国风、工笔、细腻",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "guochao",
+      "label": "国潮",
+      "promptFragment": "Chinese guochao illustration, bold vermilion and jade palette, paper-cut motifs, modern poster layout, festive energy",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "国潮、节庆、海报",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "ukiyoe",
+      "label": "浮世绘",
+      "promptFragment": "ukiyo-e woodblock print, flat color planes, bold outlines, wave patterns, washi paper texture",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "日式传统、版画",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "cyberpunk",
+      "label": "赛博朋克",
+      "promptFragment": "cyberpunk neon city, rain-slick streets, holographic signage, magenta and cyan rim light, volumetric fog",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "科幻、夜景、科技",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "solarpunk",
+      "label": "太阳朋克",
+      "promptFragment": "solarpunk utopia, lush vertical gardens, glass and wood architecture, warm daylight, optimistic atmosphere",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "环保、未来、明亮",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "anime-film",
+      "label": "日式动画电影",
+      "promptFragment": "Japanese animated film still, hand-painted backgrounds, warm rim light, detailed clouds, nostalgic mood",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "动画、日系、青春",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "3d-cartoon",
+      "label": "3D 卡通渲染",
+      "promptFragment": "3D cartoon render, stylized proportions, soft subsurface skin, clean studio lighting, Pixar-like polish",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "亲子、品牌吉祥物",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "claymation",
+      "label": "黏土定格",
+      "promptFragment": "claymation stop-motion, plasticine texture, visible fingerprints, miniature set, practical warm lighting",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "定格、童趣、手工感",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "papercut",
+      "label": "纸雕",
+      "promptFragment": " layered paper-cut art, depth shadow, craft paper texture, pastel palette, diorama shadow box",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "纸艺、层次、装饰",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "isometric",
+      "label": "等距插画",
+      "promptFragment": "isometric illustration, 30-degree axonometric view, clean vector shapes, pastel palette, soft ambient occlusion",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "UI、信息图、游戏",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "lowpoly",
+      "label": "低多边形",
+      "promptFragment": "low-poly 3D art, faceted geometry, flat shading, vibrant palette, stylized atmosphere",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "游戏、风格化",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "vaporwave",
+      "label": "蒸汽波",
+      "promptFragment": "vaporwave aesthetic, 80s grid, pastel purple and teal, CRT scanlines, chrome typography, palm silhouettes",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "复古、音乐、潮玩",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "miniature-tilt",
+      "label": "微缩移轴",
+      "promptFragment": "tilt-shift miniature photography, toy-like scale, shallow focus band, saturated colors, high vantage point",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "城市、可爱、微观",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "double-exposure",
+      "label": "双重曝光",
+      "promptFragment": "double exposure photography, silhouette blended with landscape, soft gradients, ethereal mood",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "概念、情绪、封面",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "blueprint",
+      "label": "技术蓝图",
+      "promptFragment": "technical blueprint, white linework on cyan paper, orthographic views, measurement annotations, precise geometry",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "工程、说明图、科幻UI",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "storyboard",
+      "label": "分镜线稿",
+      "promptFragment": "black-and-white storyboard sketch, loose pencil lines, grey marker shading, camera arrows, cinematic framing",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "视频前期、分镜",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "food-photo",
+      "label": "美食摄影",
+      "promptFragment": "food photography, 45-degree angle, natural window light, steam, textured ceramic plate, rustic wood table, appetizing",
+      "bestFor": [
+        "t2i"
+      ],
+      "category": "餐饮、菜单、社交",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "arch-viz",
+      "label": "建筑可视化",
+      "promptFragment": "architectural visualization, golden hour, glass and concrete facade, human scale figures, ultra-wide lens, photoreal render",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "建筑、室内、地产",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    },
+    {
+      "id": "documentary",
+      "label": "纪实摄影",
+      "promptFragment": "documentary photography, available light, candid moment, 35mm lens, muted color, honest texture",
+      "bestFor": [
+        "t2i",
+        "t2v"
+      ],
+      "category": "纪实、人文、新闻",
+      "targets": [
+        "generic-t2i",
+        "generic-t2v"
+      ]
+    }
+  ],
+  "rubric": {
+    "scale": "每个维度 1-5 分，加权换算为 100 分",
+    "dimensions": [
+      {
+        "id": "intentClarity",
+        "label": "意图清晰度",
+        "weight": 15,
+        "levels": {
+          "1": "目标模糊或多目标冲突",
+          "2": "目标可猜但不明确",
+          "3": "目标清楚但缺关键限定",
+          "4": "目标与场景明确",
+          "5": "一眼看出画面/任务目标且无矛盾"
+        }
+      },
+      {
+        "id": "subjectDetail",
+        "label": "主体具体性",
+        "weight": 15,
+        "levels": {
+          "1": "只有抽象名词",
+          "2": "主体存在但外形/动作缺失",
+          "3": "主体基本具体",
+          "4": "外形/材质/动作/数量清楚",
+          "5": "主体细节丰富且与场景一致"
+        }
+      },
+      {
+        "id": "compositionCamera",
+        "label": "构图与镜头",
+        "weight": 10,
+        "levels": {
+          "1": "无构图信息或与主体冲突",
+          "2": "只有景别",
+          "3": "景别+机位",
+          "4": "景别/机位/构图明确",
+          "5": "构图服务主体且有视觉引导"
+        }
+      },
+      {
+        "id": "lightingColor",
+        "label": "光线与色彩",
+        "weight": 10,
+        "levels": {
+          "1": "只有好看/高级",
+          "2": "有笼统光线词",
+          "3": "有光源方向或时间",
+          "4": "光源方向/色温/软硬明确",
+          "5": "光线与色彩共同营造氛围且可执行"
+        }
+      },
+      {
+        "id": "styleCoherence",
+        "label": "风格一致性",
+        "weight": 10,
+        "levels": {
+          "1": "风格词互相打架",
+          "2": "风格词堆砌无主次",
+          "3": "有主风格但混入冲突项",
+          "4": "风格统一",
+          "5": "风格统一且与媒介/题材匹配"
+        }
+      },
+      {
+        "id": "motionTemporal",
+        "label": "运动与时序（视频）",
+        "weight": 15,
+        "levels": {
+          "1": "静止描述或动作过量",
+          "2": "有动作但无路径/节奏",
+          "3": "动作与镜头运动基本清楚",
+          "4": "动作起止/镜头运动/时长匹配",
+          "5": "节拍清晰、物理合理、时长匹配"
+        }
+      },
+      {
+        "id": "audioDialogue",
+        "label": "音频与对白（视频）",
+        "weight": 5,
+        "levels": {
+          "1": "无音频设计或长对白",
+          "2": "有声音词但无层次",
+          "3": "有对白或音效其一",
+          "4": "对白短且格式正确",
+          "5": "对白+音效+环境声分层且与画面同步"
+        }
+      },
+      {
+        "id": "technicalParams",
+        "label": "参数适配",
+        "weight": 5,
+        "levels": {
+          "1": "参数缺失或与模型不兼容",
+          "2": "参数语法可疑",
+          "3": "常用参数基本正确",
+          "4": "比例/时长/分辨率匹配目标",
+          "5": "参数完整、语法正确且有取舍理由"
+        }
+      },
+      {
+        "id": "languageSyntax",
+        "label": "语言与语法适配",
+        "weight": 10,
+        "levels": {
+          "1": "中英混杂且参数写法错误",
+          "2": "语言不匹配目标模型",
+          "3": "语言基本匹配",
+          "4": "语言匹配且语法正确",
+          "5": "语言匹配、术语准确、符合模型语法"
+        }
+      },
+      {
+        "id": "safetyIP",
+        "label": "合规与版权",
+        "weight": 5,
+        "levels": {
+          "1": "明确要求侵权/违规内容",
+          "2": "高风险相似IP/真人",
+          "3": "有轻微风险",
+          "4": "基本安全",
+          "5": "无侵权角色/真人肖像风险且合规"
+        }
+      }
+    ],
+    "weightsNote": "图像任务：motionTemporal 与 audioDialogue 不计分，其权重按比例转移给 intentClarity 与 subjectDetail。",
+    "bands": [
+      {
+        "min": 90,
+        "max": 100,
+        "label": "可直接生成",
+        "action": "只微调参数"
+      },
+      {
+        "min": 75,
+        "max": 89,
+        "label": "小修",
+        "action": "补 1-2 个关键细节（构图/光线/参数）"
+      },
+      {
+        "min": 60,
+        "max": 74,
+        "label": "需增强",
+        "action": "结构可用但信息不足，走增强流程"
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "label": "需重写",
+        "action": "重写主体与结构"
+      },
+      {
+        "min": 0,
+        "max": 39,
+        "label": "意图不清",
+        "action": "回到需求澄清"
+      }
+    ],
+    "failureModes": [
+      {
+        "id": "subject-drift",
+        "symptom": "生成物与描述不符",
+        "cause": "主体太抽象/多主体无主次",
+        "fix": "具体化主体，标注主次与位置"
+      },
+      {
+        "id": "style-stack",
+        "symptom": "画面四不像",
+        "cause": "同时要求 3+ 风格",
+        "fix": "保留 1-2 个风格词，其余转光线/材质"
+      },
+      {
+        "id": "composition-lost",
+        "symptom": "主体被裁/太小",
+        "cause": "无景别机位信息",
+        "fix": "加景别+机位+主体占比"
+      },
+      {
+        "id": "flat-light",
+        "symptom": "画面平/灰",
+        "cause": "只写高级感",
+        "fix": "写光源方向、色温、软硬、时间"
+      },
+      {
+        "id": "garbled-text",
+        "symptom": "图中文字错",
+        "cause": "未用引号/文字太长",
+        "fix": "给精确短字符串，多试，或后期加字"
+      },
+      {
+        "id": "bad-hands",
+        "symptom": "手指畸形",
+        "cause": "通用模型弱点",
+        "fix": "避免手部特写，加 negative，缩小手部占比"
+      },
+      {
+        "id": "video-flicker",
+        "symptom": "帧间跳变",
+        "cause": "提示词矛盾/动作过量",
+        "fix": "减动作，锁机位，缩短时长"
+      },
+      {
+        "id": "physics-break",
+        "symptom": "物体漂移/穿模",
+        "cause": "只写运动未写受力/路径",
+        "fix": "写清动作路径、速度、重力/接触"
+      },
+      {
+        "id": "identity-shift",
+        "symptom": "多镜头换脸",
+        "cause": "未用参考图",
+        "fix": "用 oref/Edit Model/参考图/角色 ID"
+      },
+      {
+        "id": "audio-mismatch",
+        "symptom": "口型对不上",
+        "cause": "对白过长/多人对话",
+        "fix": "单人对白 ≤8 秒，短句"
+      },
+      {
+        "id": "params-ignored",
+        "symptom": "模型忽略 --ar 等",
+        "cause": "参数位置/语法错误",
+        "fix": "参数放末尾、空格正确、无标点"
+      },
+      {
+        "id": "negative-backfire",
+        "symptom": "越禁越出现",
+        "cause": "模型不支持负向（Runway/FLUX）",
+        "fix": "改正向描述"
+      }
+    ]
+  },
+  "outputSchema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "PromptStudioEnhancement",
+    "description": "增强 LLM 对单个提示词的结构化输出；插件应容错解析 JSON。",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "prompt",
+      "negativePrompt",
+      "params",
+      "variations",
+      "explanation",
+      "score",
+      "gaps",
+      "targetNotes"
+    ],
+    "properties": {
+      "prompt": {
+        "type": "string",
+        "description": "增强后的目标提示词，必须符合 target 的语言与语法"
+      },
+      "negativePrompt": {
+        "type": "string",
+        "description": "负向提示词；目标不支持时为空字符串并在 targetNotes 说明"
+      },
+      "params": {
+        "type": "object",
+        "description": "模型参数；键名见 target.paramHints",
+        "additionalProperties": true
+      },
+      "variations": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "required": [
+            "label",
+            "prompt"
+          ],
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "prompt": {
+              "type": "string"
+            },
+            "difference": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "explanation": {
+        "type": "string",
+        "description": "中文解释改了什么、为什么"
+      },
+      "score": {
+        "type": "object",
+        "required": [
+          "total",
+          "dimensions"
+        ],
+        "properties": {
+          "total": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "band": {
+            "type": "string"
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "score"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "comment": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      },
+      "gaps": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "dimension",
+            "severity",
+            "issue",
+            "fix"
+          ],
+          "properties": {
+            "dimension": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string",
+              "enum": [
+                "info",
+                "warn",
+                "blocker"
+              ]
+            },
+            "issue": {
+              "type": "string"
+            },
+            "fix": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "targetNotes": {
+        "type": "string",
+        "description": "目标模型限制、待核实参数、使用建议"
+      }
+    }
+  }
+}
