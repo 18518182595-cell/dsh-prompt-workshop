@@ -1,0 +1,17 @@
+import { loadPresets, metaForClient, resolveTarget } from '../lib/presets.js'
+import { buildEnhanceRequest, buildScoreRequest, parseJsonLoose, normalizeResult, reviewPropmtText } from '../lib/engine.js'
+const p = loadPresets()
+const target = resolveTarget('豆包')
+console.log('presets', p.targets.length, p.styles.length, 'doubao =>', target && target.label)
+const meta = metaForClient()
+console.log('meta targets', meta.targets.length, 'styles', meta.styles.length, 'tasks', meta.taskTypes.length)
+const req = buildEnhanceRequest({ input: '一个女孩在海边看日落', target: resolveTarget('midjourney'), taskType: { id: 'text2image', label: '文生图', kind: 'image' }, style: p.styles[0], variants: 3 })
+console.log('enhance prompt chars', req.length)
+const parsed = parseJsonLoose('前言\n```json\n{"prompt":"a girl","negativePrompt":"","params":{},"variations":["v1","v2"],"explanation":"ok","score":80,"gaps":["x"],"targetNotes":"n"}\n```\n后记')
+console.log('parsed', parsed && parsed.prompt)
+const norm = normalizeResult(parsed, { target, variants: 3 })
+console.log('norm', norm.prompt, norm.variations.length, norm.score)
+const review = reviewPropmtText('a lone astronaut on a rust-red dune, golden light, wide shot, 35mm lens, cinematic, film grain --ar 21:9 --v 7', resolveTarget('midjourney'))
+console.log('review score', review.score, 'gaps', review.gaps.length)
+const scoreReq = buildScoreRequest({ prompt: 'a cat', target })
+console.log('score prompt chars', scoreReq.length)
